@@ -1,10 +1,38 @@
-/* body {
-    background-color: grey;
-} */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap'); */
+
+:root {
+    --primaryColor: #48494D;
+    --orangeColor: #df8c0f;
+    --lightGreyColor: #bdbdbd;
+}
+
+.App{
+    background-color: var(--primaryColor);
+}
 
 .header {
-    /* background-color: grey; */
-    border: 2px solid red
+    /* background-color: var(--primaryColor); */
+    /* border: 2px solid red */
+}
+
+.river-buttons {
+    /* border: 2px solid red; */
+    margin: 0 auto; 
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.button {
+    border: 1.5px solid var(--lightGreyColor);
+    margin: 10px 0;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: .5em;
+    color: var(--lightGreyColor);
+    background-color: var(--primaryColor);
 }
 
 #fish-logo {
@@ -14,7 +42,7 @@
 
 /* need to fix this, its not correct */
 .search-form {
-    position: relative;
-    top: 110px;
-    margin: 0 auto;
+    /* position: relative;
+    top: 110px; */
+    margin: 20px auto;
 }

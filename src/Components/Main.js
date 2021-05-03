@@ -9,11 +9,11 @@ const Main = () => {
         <div>
             <Switch>
 
-                <Route path='/riverSelection'>
+                <Route path='/riverselection'>
                     <RiverSelection />
                 </Route>
-                <Link to='/riverSelection'>
-                    <button>Find your water weather</button>
+                <Link to='/riverselection'>
+                    <button className='button'>Find your water weather</button>
                 </Link>
             
             </Switch>
