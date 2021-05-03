@@ -47,6 +47,7 @@ const RiverSelection = () => {
                         return (
                             <div>
                                 <button
+                                className='button'
                                 onClick={ () => handleClick(item)}
                                 >{item}</button>
                             </div>

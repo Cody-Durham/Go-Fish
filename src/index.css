@@ -34,6 +34,9 @@
     color: var(--lightGreyColor);
     background-color: var(--primaryColor);
 }
+.button:hover {
+    transform: scale(1.1);
+}
 
 #fish-logo {
     /* border: 2px solid red; */
