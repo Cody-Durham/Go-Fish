@@ -1,13 +1,20 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* body {
+    background-color: grey;
+} */
+
+.header {
+    /* background-color: grey; */
+    border: 2px solid red
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#fish-logo {
+    /* border: 2px solid red; */
+}
+
+
+/* need to fix this, its not correct */
+.search-form {
+    position: relative;
+    top: 110px;
+    margin: 0 auto;
 }

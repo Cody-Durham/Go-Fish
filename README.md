@@ -74,8 +74,8 @@ Unless otherwise noted, time is listed in hours:
 | --- | :---: |  :---: | :---: | :---: |
 | Logic into creating plan & wireframes for app | H | 4 | 6 | time |
 | Create React app and files for all components | H | 2 | time | time |
-| HOME page logic | H | 3 | time | time |
-| Main page logic | H | 3 | time | time |
+| HOME page logic | H | 3 | 1 | time |
+| Main page logic | H | 3 | 1 | time |
 | River Weather page logic | H | 6 | time | time |
 | Basic Navbar & Footer | H | 3 | time | time |
 | Set up routing for all pages | H | 5 | time | time |
