@@ -70,19 +70,19 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 
 Unless otherwise noted, time is listed in hours:
 
-| Component Creation | Priority | Estimated Time | Time Invetsted | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Logic into creating plan & wireframes for app | H | 4 | 6 | time |
-| Create React app and files for all components | H | 2 | time | time |
-| HOME page logic | H | 3 | 1 | time |
-| Main page logic | H | 3 | 1 | time |
-| River Weather page logic | H | 6 | time | time |
-| Basic Navbar & Footer | H | 3 | time | time |
-| Set up routing for all pages | H | 5 | time | time |
-| React Nav bar completion | H | 3 | time | time |
-| Create SVG log and import | H | 2 | time | time |
-| Styling with CSS | H | 8 | time | time |
-| Total | H | 40 | time | time |
+| Component Creation | Priority | Estimated Time | Time Invetsted |
+| --- | :---: |  :---: | :---: |
+| Logic into creating plan & wireframes for app | H | 4 | 6 |
+| Create React app and files for all components | H | 2 | 1 |
+| HOME page logic | H | 3 | 2 |
+| Main page logic | H | 3 | 2 |
+| River Weather page logic | H | 6 | 2 |
+| Basic Navbar & Footer | H | 3 | 3 |
+| Set up routing for all pages | H | 5 | 2 |
+| React Nav bar completion | H | 3 | time |
+| Create SVG log and import | H | 2 | 2 |
+| Styling with CSS | H | 8 | 4 |
+| Total | H | 40 | 24 |
 
 ## Additional Libraries
 - Will include libraries as they are used
