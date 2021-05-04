@@ -30,23 +30,21 @@
 .main-image {
     /* border: 2px solid hotpink; */
     max-width: 100%;
-    /* max-height: 100%; */
     height: 550px;
     height: 600px;
     object-fit: cover;
-    /* background-size: cover; */
-    /* margin: auto; */
     overflow: hidden;
+    margin-bottom: 40px;
 }
 
 #water-logo {
     /* border: 2px solid red; */
     transform: scale(.7);
 }
-.span {
-    /* border: 2px solid red; */
+/* .span {
+    border: 2px solid red;
     margin: 0px !important;
-}
+} */
 
 .find-water-button {
     border: 1.5px solid var(--orangeColor);
@@ -59,6 +57,9 @@
     position: relative;
     /* top: 50px; */
     height: 40px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
 }
 
 
@@ -109,6 +110,7 @@ input[type='text'], textarea {
     border: none;
     border-radius: 4px;
     text-align: center;
+    height: 20px;
 }
 input[type='submit'] {
     background-color: var(--primaryColor);

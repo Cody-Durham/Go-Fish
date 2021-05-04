@@ -18,9 +18,7 @@ const Main = () => {
 
                  <Link to='/riverselection'>
                     <button className='find-water-button'>Find your water weather
-                        <span className="span">
                             <img src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1620098166/Project%202_API%20Calls/Water_Logo-01_sbtnuj.png" id="water-logo"></img>
-                        </span>
                     </button>
                 </Link>
                 </Route>
