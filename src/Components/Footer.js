@@ -11,22 +11,25 @@ const Footer = () => {
     
 
     return( 
-        <form 
-            className='search-form'
-            onSubmit={handleSubmit}>
-            
-            <input 
-            type='text'
-            value='Colorado / Placeholder'
-            // what is this name parameter again..? 
-            name="">
-            </input>
+        <div className='footer-color'>
+            <form 
+                className='search-form'
+                onSubmit={handleSubmit}>
+                
+                <input 
+                id='input'
+                type='text'
+                value='Colorado'
+                // what is this name parameter again..? 
+                name="">
+                </input>
 
-            <input 
-            type='submit'
-            value='submit'>
-            </input>
-        </form>
+                <input 
+                type='submit'
+                value='🔍'>
+                </input>
+            </form>
+        </div>
     )
 };
 

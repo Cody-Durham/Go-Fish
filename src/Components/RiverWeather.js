@@ -17,6 +17,7 @@ const RiverWeather = (props) => {
         //  console.log(data.weather[0].description)
      }
 
+
      useEffect( () => {getData()}, [])
      const [riverInfo, setRiverInfo] = useState(null)
 
