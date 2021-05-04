@@ -5,7 +5,7 @@ const Footer = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        console.log('testing')
+        // console.log('testing')
     }
 
     

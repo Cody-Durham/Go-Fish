@@ -6,28 +6,34 @@ import RiverWeather from './RiverWeather'
 const Main = () => {
     return( 
         <div>
-            <div className='main-image'>
-                <img src='https://res.cloudinary.com/dhad6e9gj/image/upload/v1620093668/Project%202_API%20Calls/Fishing_Image_scaled_bur7an.jpg'></img>
-            </div>
+           
+
+
+
             <Switch>
-                
-                <Route path='/riverselection'>
-                    <RiverSelection />
-                </Route>
-                <Link to='/riverselection'>
+                <Route exact path='/'>
+                    <div className='main-image'>
+                        <img src='https://res.cloudinary.com/dhad6e9gj/image/upload/v1620093668/Project%202_API%20Calls/Fishing_Image_scaled_bur7an.jpg'></img>
+                    </div>
+
+                 <Link to='/riverselection'>
                     <button className='find-water-button'>Find your water weather
                         <span className="span">
                             <img src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1620098166/Project%202_API%20Calls/Water_Logo-01_sbtnuj.png" id="water-logo"></img>
                         </span>
                     </button>
                 </Link>
+                </Route>
 
-            
+                {/* LINK to show river buttons */}
+                <Route path='/riverselection'>
+                    <RiverSelection />
+                </Route>
+                    
+            {/* ROUTE to show rivers with the corrisponding zipcode in URL*/}
                 <Route path='/riverweather/:zip'
                     render={ (routerProps) => <RiverWeather {...routerProps} />}>
-                    <RiverWeather />
                 </Route> 
-           
             </Switch>
         </div>
     )
