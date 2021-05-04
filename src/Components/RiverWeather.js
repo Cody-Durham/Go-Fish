@@ -1,6 +1,5 @@
 import React from 'react';
 import {useState,useEffect} from 'react'
-import {Link} from 'react-router-dom'
 
 
 const RiverWeather = (props) => {
@@ -23,11 +22,31 @@ const RiverWeather = (props) => {
      
      const loaded = () => {
          return (
-             <div>
-                {/* <h1>{riverInfo.name}</h1> */}
-                <h2>TESTINGGGGGING</h2>
-                <img src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1619666522/Project%202_API%20Calls/IMG_6573_b_ykghcx.jpg"></img>
-            </div>
+            //  <h1>test</h1>
+             <section>
+
+                <div className="river-name-container">
+                    <h1>The River Name</h1>
+                </div>
+                <div id="river-image">
+                    <img src="https://captainzipline.com/wp-content/uploads/captain-zipline-ecology-arkansas-river.jpg" alt=""></img>
+                </div>
+                <div id="river-weather-container">
+               
+                <div>
+                    <h3>box 1</h3>
+                </div>
+                <div>
+                    <h3>box 2</h3>
+                </div>
+                </div>
+                <div id="back-to-rivers-button-container">
+                    <button className="button">Back to rivers</button>
+                </div>
+
+            </section>
+          
+            
         )
     }
 
@@ -57,3 +76,6 @@ const RiverWeather = (props) => {
 };
 
 export default RiverWeather
+
+
+

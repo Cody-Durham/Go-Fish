@@ -97,13 +97,14 @@ h2 {
     background-color: var(--primaryColor);
 }
 
-.button:hover {
+/* .button:hover {
     transform: scale(1.05);
-}
+} */
 
 
 
-/* FOOTER AREA */
+
+/* ********************* FOOTER AREA ***************** */
 .footer-color {
     /* border: 2px solid red; */
     position: relative;
@@ -148,4 +149,49 @@ input[type='submit']:active {
     /* border: 2px solid red; */
     overflow: scroll;
     height: 600px;
+}
+
+
+/* *********************** RIVER DATA PAGE STYLING *********************** */
+
+.river-name-container {
+    /* border: 2px solid red; */
+    margin: 0 0 40px 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--orangeColor);
+}
+.river-name h1 {
+    text-transform: uppercase;
+}
+
+#river-image {
+    /* border: 2px solid aqua; */
+    width: 100vw;
+    height: 600px; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-image: cover;
+    margin: 0 0 40px 0;
+}
+
+#river-weather-container {
+    border: 2px solid red;
+    height: 100px;
+    width: 60vw;
+    /* margin: 40px 0 60px 0; */
+    display: flex;
+    justify-content:space-between;
+    margin: 0 auto;
+}
+
+#river-weather-container h3 {
+    border: 2px solid hotpink;
+}
+
+#back-to-rivers-button-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
 }
