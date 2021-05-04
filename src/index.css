@@ -147,5 +147,5 @@ input[type='submit']:active {
 .river-container {
     /* border: 2px solid red; */
     overflow: scroll;
-    height: 700px;
+    height: 600px;
 }
