@@ -33,21 +33,21 @@ const rivers = [
 const RiverSelection = (props) => {  
     return (
         <div>
-        <hr className='header-line'></hr>
-        {rivers.map((river, index) => {
-            // const {name} = river 
-            const name = river.name
-        
-            return (
-            // not sure which one link is correct
-
-            <Link to={`/riverweather/${river.zip}`} class="link"> 
-                <div
-                key={index}>
+            <hr className='header-line'></hr>
+            {rivers.map((river, index) => {
+                // const {name} = river 
+                const name = river.name
+            
+                return (
+                // not sure which one link is correct
+                <Link to={`/riverweather/${river.zip}`} class="link"> 
+                <div key={index}>
                 </div>
                 <h2 className='button'>{name}</h2>
-            </Link>)
+                </Link>)
             })}
+
+
         </div>
     )
 

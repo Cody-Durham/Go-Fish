@@ -27,16 +27,15 @@
 .header {
     position: fixed;
 }
-.header-line {
+
+/* .header-line {
     text-decoration: none;
     border: none;
     border-top: 3px solid #ec6e08;
     width: 100vw;
-    /* position: fixed; */
     position: absolute;
-    /* top: 50px; */
     top: 7vh;
-}
+} */
 
 #fish-logo {
     /* border: 2px solid red; */
@@ -93,6 +92,7 @@ h2 {
     border-radius: 3px;
     text-transform: uppercase;
     font-size: .5em;
+    width: 40vw;
     color: var(--lightGreyColor);
     background-color: var(--primaryColor);
 }
@@ -143,3 +143,8 @@ input[type='submit']:active {
     transform: scale(1.2)
 }
 
+/* *********************** RIVER SECTION STYLING *********************** */
+
+.river-container {
+    border: 2px solid red;
+}
