@@ -30,10 +30,10 @@ const rivers = [
     {name: 'South Boulder', zip: '80466', img: 'https://lh3.googleusercontent.com/XyYOMhNNKjV_2jr9nYDreyFwUbLuNob_IE9Mce8P1L3V4SOcBAsI-XIwK0O5fT0P9vkRhnGpFjCLVVicJnE1bRIXrOBXH_RTXGFJlGNx1uS_w6_9JqPmJH5bF1rKyFBp2-hEnOPjfJAGXV8JGm-c0LPdwg3MppyNyiEMJxdh0Zfj6RXLzwVUHzQN2hX67bNR6Vy1moKpXMv88jj0xhfIJB5LixA-EmCOROU4IGu617JGgwjh91yA9OBcJRZ4ZgurzYSpfQjOTHocX5FDNzJSOIWVouWijmHuqbN2zMVt1a-9-LEQ8DFyyxDWm41Z8wXvYO3Yj6k3bL4mAz6tN6jMNTnsMjZO09r43piviDcWBFhllrw_99t1aUQD7L3bH93JYrWz2bsdRD3UY2tiyTEuACHjBbNMTtye0csBk-EB8hCNJDNDr8aAoTcrwxFNE8a2uuy9YHkpDSt4uBg3HWGooqic9AKdoReD05G_Ur8rrpnNZI6V4B__ezSZn3i89QCQYDYaitbhMei9-hAwz8ocRgo_fxkBvsbYhBZLioP09KVnJZLFHLrJEvwS73vF-lKUV_e3xYGqCp6fF5JT2EluxlgwqnEsSCp0X-wRzRCaLBpQY4N8XEAN4UyOR0RUXL1ydLiUPOzU_HkOBAx7RgQFOS6XkiSZ93_IrnhEz9_zmuxoix3bPKRYZjopBFK8734=w1184-h888-no?authuser=0', map: 'https://www.google.com/maps/place/South+Boulder+Creek/@39.9388052,-105.3492709,16.21z/data=!4m5!3m4!1s0x876bf1ffbab4f76f:0x8ccc81af88645046!8m2!3d39.9532046!4d-105.2416038'}, 
 ]
 
-const RiverSelection = () => {
-
+const RiverSelection = (props) => {  
     return (
         <div>
+        <hr className='header-line'></hr>
         {rivers.map((river, index) => {
             // const {name} = river 
             const name = river.name

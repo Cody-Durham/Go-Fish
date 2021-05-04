@@ -12,6 +12,7 @@
 .body {
     background-color: var(--primaryColor);
     height: 100%;
+    margin: 0;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -24,14 +25,23 @@
 }
 
 .header {
-    /* background-color: var(--primaryColor); */
-    /* border: 2px solid red */
+    position: fixed;
+}
+.header-line {
+    text-decoration: none;
+    border: none;
+    border-top: 3px solid #ec6e08;
+    width: 100vw;
+    /* position: fixed; */
+    position: absolute;
+    /* top: 50px; */
+    top: 7vh;
 }
 
 #fish-logo {
     /* border: 2px solid red; */
     position:absolute;
-    left: 25px;
+    left: 3vw;
 }
 
 .main-image {
@@ -98,14 +108,18 @@ h2 {
     /* border: 2px solid red; */
     position: relative;
     bottom: -20px;
+    display: flex;
+    justify-content: center;
     background-color: var(--orangeColor);
+    /* position: fixed;
+    bottom: 20px; */
+    
 }
 
 .search-form {
+    /* border: 2px solid red; */
     position: relative;
-    /* bottom: -30px; */
-    margin: 10px auto;
-    /* height: 50px; */
+    margin: 5px auto;
 }
 
 input[type='text'], textarea {
@@ -117,7 +131,7 @@ input[type='text'], textarea {
     border: none;
     border-radius: 4px;
     text-align: center;
-    height: 20px;
+    height: 23px;
 }
 input[type='submit'] {
     background-color: var(--primaryColor);
