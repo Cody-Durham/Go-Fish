@@ -1,12 +1,20 @@
 import React from 'react'
-// import FishLogo from '../Wireframes/Assets/GoFish_logo-01.png'
+import {Link} from 'react-router-dom'
 
 const Header = () => {
+
+
+
     return( 
-        <div className="header">
+        <Link to={'/'}>
             <img src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1619820542/Project%202_API%20Calls/GoFish_logo-01_apx6bm.png" alt="fishing logo" id="fish-logo"/>
+        </Link>
+
+
+
+        // <div className="header">
             
-        </div>
+        // </div>
     )
 };
 

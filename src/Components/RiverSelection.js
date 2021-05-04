@@ -1,68 +1,81 @@
 import React, { useState, useEffect } from 'react'
+import {Link} from 'react-router-dom'
 
-const rivers = ['Arkansas', 'Big Thompson', 'Blue River', 'Clear Creek', 'Colorado', 'Dream Stream', 'Eagle', 'San Juan', 'Yampa']
+// const rivers = ['Arkansas', 'Big Thompson', 'Blue River', 'Clear Creek', 'Colorado', 'Dream Stream', 'Eagle', 'San Juan', 'Yampa']
 
-// const rivers = [
-//     {name: 'Arkansas'}, 
-//     {name: 'Big Thompson'}, 
-//     {name: 'Blue River'}, 
-//     {name: 'Clear Creek'}, 
-//     {name: 'Colorado'}, 
-//     {name: 'Dream Stream'}, 
-//     {name: 'Eagle'}, 
-//     {name: 'San Juam'},
-// ]
+const rivers = [
+    {name: 'Arkansas', zip: '81201' }, 
+    {name: 'Big Thompson', zip: '80515'}, 
+    {name: 'Blue River', zip: '84204'}, 
+    {name: 'Clear Creek', zip: '80403'}, 
+    {name: 'Colorado', zip: '80459'}, 
+    {name: 'Dream Stream', zip: '80827'}, 
+    {name: 'Eagle', zip: '81657'}, 
+    {name: 'San Juan', zip: '81147'},
+]
+// console.log(rivers.zip);
 
 
 const RiverSelection = () => {
 
-    // console.log(rivers[0])
-    const apiKey = 'aa935301c915ffe8a819f0d6177a4bf7'
-    // const apiLocation = `props.match.params.name`
-    const apiLocation = 'lakewood'
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${apiLocation}&appid=${apiKey}`
+    return <div>
+    {rivers.map((river, index) => {
+        const {name} = river 
+        
+        
+        return (<Link to={`/riverweather/${river.zip}`}>
+                <div
+                key={index}>
+                </div>
+                <h2>{name}</h2>
+        </Link>)
+    })}
+</div>
 
-    const getData = async () => {
-        const response = await fetch(url)
-        const data = await response.json()
-        setRiverInfo(data)
-        // console.log(data.weather[0].description)
-    }
-    useEffect( () => {getData()}, [])
-    const [riverInfo, setRiverInfo] = useState(null)
-  
+    // return <div>
+    //     {rivers.map((thing, index) => {
+    //         const {name} = thing 
+            
+    //         return (<Link to={`/riverweather/${thing.zip}`}>
+    //                 <div
+    //                 key={index}>
+    //                 </div>
+    //                 <h2>{name}</h2>
+    //         </Link>)
+    //     })}
+    // </div>
+      
+    
+    
+    // const handleClick = (riverName) => {
+    //     console.log(riverName)
+    // }
 
-    const handleClick = (riverName) => {
-        console.log(riverName)
-        // console.log(riverInfo.name)
-        // console.log(riverInfo.wind)
-        // console.log(riverInfo.clouds)
-    }
 
-    const loaded = () => {
-        return (
-            <div>
-                {
-                    rivers.map( (item, index) => {
-                        return (
-                            <div>
-                                <button
-                                className='button'
-                                onClick={ () => handleClick(item)}
-                                >{item}</button>
-                            </div>
-                        )
-                    })
-                }
-            </div>
-        )
-    }
+    // const loaded = () => {
+    //     return (
+    //         <div>
+    //             {
+    //                 rivers.map( (item, index) => {
+    //                     return (
+    //                         <div>
+    //                             <button
+    //                             className='button'
+    //                             onClick={ () => handleClick(item)}
+    //                             >{item}</button>
+    //                         </div>
+    //                     )
+    //                 })
+    //             }
+    //         </div>
+    //     )
+    // }
 
-    const loading = () => {
-        return <h3>loading...page is not loading</h3>
-    }
+    // const loading = () => {
+    //     return <h3>loading...page is not loading</h3>
+    // }
 
-    return riverInfo ? loaded() : loading()
+    // return riverInfo ? loaded() : loading()
     
     
     

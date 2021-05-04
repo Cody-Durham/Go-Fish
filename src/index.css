@@ -16,13 +16,16 @@
     /* border: 2px solid red */
 }
 
-.river-buttons {
-    /* border: 2px solid red; */
-    margin: 0 auto; 
-    width: 15%;
-    display: flex;
-    flex-direction: column;
+#button-housing {
+    background-color: aqua;
+}
 
+
+h2 {
+    width: 15%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 .button {
@@ -34,8 +37,9 @@
     color: var(--lightGreyColor);
     background-color: var(--primaryColor);
 }
+
 .button:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 #fish-logo {
