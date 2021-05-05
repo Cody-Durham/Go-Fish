@@ -33,7 +33,7 @@ const RiverWeather = (props) => {
                 </div>
                 <div id="river-image">
                     <img src="https://captainzipline.com/wp-content/uploads/captain-zipline-ecology-arkansas-river.jpg" alt=""></img>
-                    <img src="{riverInfo.img}" alt=""></img>
+                    {/* <img src="{riverInfo.img}" alt=""></img> */}
                 </div>
                 <div id="river-weather-container">
                
@@ -49,8 +49,6 @@ const RiverWeather = (props) => {
                 </div>
 
             </section>
-          
-            
         )
     }
 
