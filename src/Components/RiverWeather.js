@@ -5,7 +5,7 @@ import {useState,useEffect} from 'react'
 const RiverWeather = (props) => {
      const apiKey = 'aa935301c915ffe8a819f0d6177a4bf7'
      const apiLocation = props.match.params.zip
-     const url = `http://api.openweathermap.org/data/2.5/weather?q=${apiLocation},us&appid=${apiKey}`
+     const url = `https://api.openweathermap.org/data/2.5/weather?q=${apiLocation},us&appid=${apiKey}`
      
      const [riverInfo, setRiverInfo] = useState(null)
      

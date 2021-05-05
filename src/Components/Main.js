@@ -6,9 +6,6 @@ import RiverWeather from './RiverWeather'
 const Main = () => {
     return( 
         <div>
-           
-
-
 
             <Switch>
                 <Route exact path='/'>
