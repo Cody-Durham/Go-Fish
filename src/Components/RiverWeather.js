@@ -5,14 +5,14 @@ import {useState,useEffect} from 'react'
 const RiverWeather = (props) => {
      const apiKey = 'aa935301c915ffe8a819f0d6177a4bf7'
      const apiLocation = props.match.params.zip
-     const url = `http://api.openweathermap.org/data/2.5/weather?q=${apiLocation}&appid=${apiKey}`
+     const url = `http://api.openweathermap.org/data/2.5/weather?q=${apiLocation},us&appid=${apiKey}`
      
      const [riverInfo, setRiverInfo] = useState(null)
-
      
      const getData = async () => {
          const response = await fetch(url)
          const data = await response.json()
+         //rivers .index of (loop through river name)
          setRiverInfo(data)
           console.log(data)
         }
@@ -20,16 +20,20 @@ const RiverWeather = (props) => {
 
      useEffect( () => {getData()}, [])
      
-     const loaded = () => {
+     const loaded = (props) => {
+
+        
+
+
          return (
-            //  <h1>test</h1>
              <section>
 
                 <div className="river-name-container">
-                    <h1>The River Name</h1>
+                    <h1>{riverInfo.name} River</h1>
                 </div>
                 <div id="river-image">
                     <img src="https://captainzipline.com/wp-content/uploads/captain-zipline-ecology-arkansas-river.jpg" alt=""></img>
+                    <img src="{riverInfo.img}" alt=""></img>
                 </div>
                 <div id="river-weather-container">
                
