@@ -134,10 +134,14 @@ input[type='submit'] {
     background-color: var(--primaryColor);
     border: none;
     margin-left:5px;
-    border-radius: 8px;
+    border-radius: none;
 }
-/* input[type='submit']:active {
+input[type='submit']:active {
     transform: scale(1.2)
+}
+/* input[type='submit'] {
+    -webkit-appearance: none;
+    border-radius: none;
 } */
 
 
