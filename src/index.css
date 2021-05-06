@@ -130,12 +130,12 @@ input[type='text'], textarea {
     text-transform: uppercase;
     height: 23px;
 }
-/* input[type='submit'] {
+input[type='submit'] {
     background-color: var(--primaryColor);
     border: none;
     margin-left:5px;
-    border-radius: 2px;
-} */
+    border-radius: 8px;
+}
 /* input[type='submit']:active {
     transform: scale(1.2)
 } */
