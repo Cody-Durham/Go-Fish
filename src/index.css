@@ -135,7 +135,7 @@ input[type='submit'] {
     border: none;
     margin-left:5px;
     border-radius: none;
-    height:;
+    height: 25px;
 }
 
 input[type='submit']:active {
