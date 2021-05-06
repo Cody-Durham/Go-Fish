@@ -26,8 +26,7 @@ const Footer = () => {
 
                 <input 
                 type='submit'
-                // value='🔍'>
-                value='😤'>
+                value='🔍'>
                 </input>
             </form>
         </div>
