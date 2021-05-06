@@ -29,15 +29,27 @@ const RiverWeather = (props) => {
         setRiverInfo(data)
     }
     useEffect( () => {getData()}, [])
+
+    // const setWeatherIcon = () => {
+    //     console.log('testing')
+    // }
+
+    function setWeatherIcon() {
+        console.log()
+    }
+    setWeatherIcon()
+
+
     
     
     const loaded = (props) => {
         // console.log(riverInfo);
+        // (setWeatherIcon)
         
         const temp = riverInfo.main.temp;
         const wind = riverInfo.wind.speed;
-
-         return (
+        
+        return (
              <section>
                 <div className="river-name-container">
                     {/* <p> City Location:</p> */}
