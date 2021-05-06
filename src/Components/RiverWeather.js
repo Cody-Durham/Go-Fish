@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState,useEffect} from 'react'
+import {Link} from 'react-router-dom'
 import riversArr from '../riversArr'
 
 // setRiverInfo({ weather: data, river: riverInfo })
@@ -62,7 +63,7 @@ const RiverWeather = (props) => {
      const loaded = (props) => {
     
         const temp = riverInfo.main.temp;
-        const wind = riverInfo.wind.speed;
+        // const wind = riverInfo.wind.speed;
         // console.log(temp);
         // console.log(wind);
 
@@ -91,9 +92,15 @@ const RiverWeather = (props) => {
                 </div>
              
                 </div>
-                <div id="back-to-rivers-button-container">
+                <Link to={'/riverselection'}>
+                    <div id="back-to-rivers-button-container">
+                        <button className="button">Back to rivers</button>
+                    </div>
+                </Link>
+
+                {/* <div id="back-to-rivers-button-container">
                     <button className="button">Back to rivers</button>
-                </div>
+                </div> */}
 
             </section>
         )
