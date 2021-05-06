@@ -63,8 +63,8 @@ const RiverWeather = (props) => {
     
         const temp = riverInfo.main.temp;
         const wind = riverInfo.wind.speed;
-        console.log(temp);
-        console.log(wind);
+        // console.log(temp);
+        // console.log(wind);
 
          return (
              <section>
@@ -79,13 +79,17 @@ const RiverWeather = (props) => {
                 <div id="river-weather-container">
                
                 <div>
+                <img src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1620156422/Project%202_API%20Calls/GoFish_logo-01_motasb.svg" alt=""></img>
                     <h3>TEMP: {temp}</h3>
                     {/* <h3>TEST</h3> */}
                 </div>
+
                 <div>
-                    <h3>WIND: {wind}</h3>
-                    {/* <h3>box 2</h3> */}
+                <img src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1620156422/Project%202_API%20Calls/GoFish_logo-01_motasb.svg" alt=""></img>
+                    <h3>WIND: {temp}</h3>
+                    {/* <h3>TEST</h3> */}
                 </div>
+             
                 </div>
                 <div id="back-to-rivers-button-container">
                     <button className="button">Back to rivers</button>
