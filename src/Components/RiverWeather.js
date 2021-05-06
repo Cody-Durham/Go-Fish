@@ -70,12 +70,12 @@ const RiverWeather = (props) => {
                         <button className="button">Back to rivers</button>
                     </div>
                 </Link>
+                <Link to={'/'}>
+                    <div id="back-to-home-button-container">
+                        <button className="button">Back to the truck</button>
+                    </div>
+                </Link>
 
-                <div>
-                    <Link to={'/'}>
-                    <button className="button">Back home</button>
-                    </Link>
-                </div>
 
             </section>
         )
