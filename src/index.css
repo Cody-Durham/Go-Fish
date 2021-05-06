@@ -156,50 +156,72 @@ input[type='submit']:active {
 
 .river-name-container {
     /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 0 15px 0;
     height: 70px;
     display: flex;
     justify-content: center;
     background-color: var(--orangeColor);
 }
-.river-name h1 {
+
+.river-name-container h3 {
+    /* border: 2px solid red; */
+    font-size: 1.2em;
+    width: 60vw;
+    margin-bottom: 35px;
     text-transform: uppercase;
 }
 
+#city-loacation p {
+    /* border:2px solid red;  */
+    position: relative;
+    bottom: 45px;
+    margin: 0px;
+}
+
 #river-image {
-    /* border: 2px solid aqua; */
-    width: 100vw;
+    /* border: 2px solid red); */
+    width: 90vw;
     height: 500px; 
     overflow: hidden;
     display: flex;
     justify-content: center;
     background-image: cover;
-    margin: 0 0 20px 0;
+    /* margin: 0 0 20px 0; */
+    margin: 0 auto;
+    border-radius: 20px;
 }
 
-#river-weather-container {
+#weather-container {
     /* border: 2px solid red; */
     height: 90px;
     width: 70vw;
-    /* margin: 40px 0 60px 0; */
     display: flex;
     justify-content:space-between;
     margin: 0 auto;
 }
 
-#river-weather-container img {
+#tempature-icon {
     /* border: 2px solid hotpink; */
-    transform: scale(.7);
-    position: relative;
-    bottom: 20px;
+    /* transform: scale(.7); */
+    margin-bottom: 10px;
+}
+#wind-icon {
+    /* border: 2px solid rgb(94, 244, 39); */
+    /* transform: scale(.7); */
+    margin-bottom: 10px;
 }
 
-#river-weather-container h3 {
-    /* border: 2px solid hotpink; */
+
+
+#weather-container h3 {
+    /* border: 2px solid red; */
     color: var(--lightGreyColor);
     margin: 0;
     position: relative;
-    bottom: 40px;
+    bottom: 20px;
 }
 
 

@@ -16,20 +16,6 @@ const RiverWeather = (props) => {
     const [riverInfo, setRiverInfo] = useState(null)
     const [riverPic, setRiverPic] = useState(null)
     
-    
-    //NOTES: 
-    //can I loop over the riversArr here and pull out the images?
-    //then I can set the new state to use that picture?
-    //looping over the riversArr and returning the images
-    
-    //  const filterRiverArr = riversArr.filter( () => RiverWeather.name === props.match.params.name)
-    //  console.log(filterRiverArr)
-    //  const test = 1
-    //  console.log(test);
-    
-    //  const animals = ['cat', 'emu', 'dog', 'horse', 'panda', 'turtle']
-    //  const filterAnimals = animals.filter( word => word.length <= 5)
-    //  console.log(filterAnimals)
 
     const filterPic = riversArr.filter( (river) => {
         // console.log('image test')
@@ -42,41 +28,41 @@ const RiverWeather = (props) => {
         const data = await response.json()
         setRiverInfo(data)
     }
-    
     useEffect( () => {getData()}, [])
-    // If the page loads then this will log.. otherwise it throws an error
-    // console.log(riverInfo.main.temp);
+    
     
     const loaded = (props) => {
-        console.log(riverInfo);
+        // console.log(riverInfo);
         
         const temp = riverInfo.main.temp;
         const wind = riverInfo.wind.speed;
 
          return (
              <section>
-
                 <div className="river-name-container">
-                    <h1>{riverInfo.name} River</h1>
+                    {/* <p> City Location:</p> */}
+                    <h3>{riverInfo.name}</h3>
                 </div>
+                <div id="city-loacation">
+                     <p>City Location:</p>
+                 </div>
+             
                 <div id="river-image">
                     <img src={filterPic[0].img} alt=""></img>
                     {/* <img src="https://captainzipline.com/wp-content/uploads/captain-zipline-ecology-arkansas-river.jpg" alt=""></img> */}
                     {/* <img src="{riverInfo.img}" alt=""></img> */}
                 </div>
-                <div id="river-weather-container">
+                <div id="weather-container">
                
                 <div>
-                <img src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1620156422/Project%202_API%20Calls/GoFish_logo-01_motasb.svg" alt=""></img>
+                <img src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339339/Project%202_API%20Calls/Sunny-01_iaqfif.png" alt="" id='tempature-icon'></img>
                     <h3>TEMP: {temp}</h3>
-                    {/* <h3>TEST</h3> */}
+                </div>
+                <div>
+                <img src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339683/Project%202_API%20Calls/Windy-01_zjb8jc.png" alt="" id='wind-icon'></img>
+                    <h3>WIND: 0{wind}</h3>
                 </div>
 
-                <div>
-                <img src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1620156422/Project%202_API%20Calls/GoFish_logo-01_motasb.svg" alt=""></img>
-                    <h3>WIND: {wind}</h3>
-                    {/* <h3>TEST</h3> */}
-                </div>
              
                 </div>
                 <Link to={'/riverselection'}>
@@ -85,9 +71,11 @@ const RiverWeather = (props) => {
                     </div>
                 </Link>
 
-                {/* <div id="back-to-rivers-button-container">
-                    <button className="button">Back to rivers</button>
-                </div> */}
+                <div>
+                    <Link to={'/'}>
+                    <button className="button">Back home</button>
+                    </Link>
+                </div>
 
             </section>
         )
