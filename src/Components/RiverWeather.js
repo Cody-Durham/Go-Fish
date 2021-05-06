@@ -8,18 +8,14 @@ import riversArr from '../riversArr'
 const RiverWeather = (props) => {
     const apiKey = 'aa935301c915ffe8a819f0d6177a4bf7'
     const apiLocation = props.match.params.zip
+    // console.log('test', props)
     // const apiWeather = props.match.params.main.temp
     // const url = `https://api.openweathermap.org/data/2.5/weather?q=${apiLocation},us&appid=${apiKey}`
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${apiLocation},us&units=imperial&appid=${apiKey}`
     
     const [riverInfo, setRiverInfo] = useState(null)
-    // const temp = riverInfo.main.temp;
-    // const wind = riverInfo.wind.speed;
+    const [riverPic, setRiverPic] = useState(null)
     
-
-    // console.log(riverInfo.main.temp);
-    
-    //  const [riverPic, setRiverPic] = useState(null)
     
     //NOTES: 
     //can I loop over the riversArr here and pull out the images?
@@ -34,38 +30,28 @@ const RiverWeather = (props) => {
     //  const animals = ['cat', 'emu', 'dog', 'horse', 'panda', 'turtle']
     //  const filterAnimals = animals.filter( word => word.length <= 5)
     //  console.log(filterAnimals)
+
+    const filterPic = riversArr.filter( (river) => {
+        // console.log('image test')
+        return (river.zip === props.match.params.zip)
+    })
     
+
     const getData = async () => {
         const response = await fetch(url)
         const data = await response.json()
-        
         setRiverInfo(data)
-        
-        //  console.log(riverInfo.main.temp)
-        
-        //  let newPic = riversArr.includes(riversArr[0].zip)
-        //  let newPic2 = riversArr.includes(riversArr[0].zip)
-        //  setRiverPic(newPic)
-        
-        //   console.log(data)
-        //   console.log(newPic)
-        //   console.log(newPic2)
-        //   console.log(riversArr[0].zip)
-        //   console.log('river image', riversArr[0].zip)
-        //   console.log(riverPic);
-        // console.log(data.main.temp);
     }
     
     useEffect( () => {getData()}, [])
     // If the page loads then this will log.. otherwise it throws an error
     // console.log(riverInfo.main.temp);
-     
-     const loaded = (props) => {
     
+    const loaded = (props) => {
+        console.log(riverInfo);
+        
         const temp = riverInfo.main.temp;
-        // const wind = riverInfo.wind.speed;
-        // console.log(temp);
-        // console.log(wind);
+        const wind = riverInfo.wind.speed;
 
          return (
              <section>
@@ -74,7 +60,8 @@ const RiverWeather = (props) => {
                     <h1>{riverInfo.name} River</h1>
                 </div>
                 <div id="river-image">
-                    <img src="https://captainzipline.com/wp-content/uploads/captain-zipline-ecology-arkansas-river.jpg" alt=""></img>
+                    <img src={filterPic[0].img} alt=""></img>
+                    {/* <img src="https://captainzipline.com/wp-content/uploads/captain-zipline-ecology-arkansas-river.jpg" alt=""></img> */}
                     {/* <img src="{riverInfo.img}" alt=""></img> */}
                 </div>
                 <div id="river-weather-container">
@@ -87,7 +74,7 @@ const RiverWeather = (props) => {
 
                 <div>
                 <img src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1620156422/Project%202_API%20Calls/GoFish_logo-01_motasb.svg" alt=""></img>
-                    <h3>WIND: {temp}</h3>
+                    <h3>WIND: {wind}</h3>
                     {/* <h3>TEST</h3> */}
                 </div>
              
