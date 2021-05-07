@@ -3,17 +3,21 @@
 ## Project Links
 
 - [Project Page on Github](https://github.com/Cody-Durham/project2-api-calls/blob/main/README.md)
-- [Site Deployed here on Netlify](https://flamboyant-archimedes-058278.netlify.app)
+- [Site Deployed Here](https://flamboyant-archimedes-058278.netlify.app)
 
+![Working example of the GoFish App ](https://media.giphy.com/media/uzakXuIvfW4Raq3PdL/giphy.gif)
 ## Project Description
 
-For this project, I plan to make a weather driven app that will display the current weather for different zipcodes that correspond to rivers to fish. Using a weather data API the user will be able to click on a name of a river to fish and find out the weather. Fish in the sun, snow, wind, now we can know before we go. <br>
+For this project, I plan to make a weather driven app that will display the current weather for different zipcodes that correspond to rivers to fish. Using a weather data API the user will be able to click on a name of a river to fish and find out weather conditions. Fish in the sun, snow, wind, now we can know before we go. <br>
+NOTE: This is only avaiable in mobile view.<br>
 ![Fishing the Blue in Colorado morning ](https://res.cloudinary.com/dhad6e9gj/image/upload/v1619666522/Project%202_API%20Calls/IMG_6573_b_ykghcx.jpg)
+
+
 
 ## API
 
-- [Open Weather Data API here](https://openweathermap.org/current#name)
-- [Example of accessing the API @ Loveland](http://api.openweathermap.org/data/2.5/weather?q=loveland&appid=aa935301c915ffe8a819f0d6177a4bf7)
+- [Open Weather Data API](https://openweathermap.org/current#name)
+- [Example of accessing the API @ Loveland](https://res.cloudinary.com/dhad6e9gj/video/upload/v1620357272/Project%202_API%20Calls/Screen_Recording_2021-05-06_at_9.11.54_PM_qbvowg.mov)
 
 
 ```
@@ -73,30 +77,57 @@ Unless otherwise noted, time is listed in hours:
 | Component Creation | Priority | Estimated Time | Time Invetsted |
 | --- | :---: |  :---: | :---: |
 | Logic into creating plan & wireframes for app | H | 4 | 6 |
-| Create React app and files for all components | H | 2 | 1 |
+| Create React app and files for all components | H | 2 | 3 |
 | HOME page logic | H | 3 | 2 |
-| Main page logic | H | 3 | 2 |
-| River Weather page logic | H | 6 | 2 |
+| Main page logic | H | 3 | 3 |
+| River Weather page logic | H | 6 | 15 |
 | Basic Navbar & Footer | H | 3 | 3 |
-| Set up routing for all pages | H | 5 | 2 |
-| React Nav bar completion | H | 3 | time |
-| Create SVG log and import | H | 2 | 2 |
-| Styling with CSS | H | 8 | 4 |
-| Total | H | 40 | 24 |
+| Set up routing for all pages | H | 5 | 5 |
+| React Nav bar completion | H | 3 | 3 |
+| Create SVGs and use correctly | H | 2 | 4 |
+| Styling with CSS | H | 8 | 10 |
+| Total | H | 40 | 53 |
 
 ## Additional Libraries
-- Will include libraries as they are used
+- React, Router, Link
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  Code snippet should not be greater than 10 lines of code.
+Use this section to include a brief code snippet of functionality that you are proud of and a brief description. <br>
+- Nothing too special about this code below but I enjoyed figuring out how to target the 'type' and 'value' in the CSS to customize it away from its native appearance. 
 
-The below code is how the leaderboard is populated. The shorter the name, the more dots are added between the name and score. The font size is set progressively smaller for each entry.
+```
+ <div className='footer-color'>
+            <form 
+                className='search-form'
+                onSubmit={handleSubmit}>
 
+                <input 
+                type='submit'
+                value='🔍'>
+                </input>
+            </form>
+        </div>
 ```
-code snippet TBD
+- This is some of the CSS styling for the search bar and icon in the app. 
 ```
-...
+input[type='submit'] {
+    background-color: var(--primaryColor);
+    border: none;
+    margin-left:5px;
+    border-radius: none;
+    height: 28px;
+}
+
+input[type='submit']:active {
+    transform: scale(1.2)
+}
+input[type='submit'] {
+    -webkit-appearance: none;
+    border-radius: none;
+}
 ```
-code snippet TBD
-```
+## Now go outside... and fish...
+<p>
+<img src='https://i.pinimg.com/originals/53/ed/56/53ed56fbf2ef2f98b0f15d80834681dc.jpg'/>
+</p>

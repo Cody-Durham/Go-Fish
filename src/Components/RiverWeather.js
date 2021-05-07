@@ -3,13 +3,13 @@ import {useState,useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import riversArr from '../riversArr'
 
-const tempIcons = [
-    {name: 'sun', src: "https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339339/Project%202_API%20Calls/Sunny-01_iaqfif.png"}, 
-    {name: 'cloud', src: "https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339339/Project%202_API%20Calls/Sunny-01_iaqfif.png"}, 
-    {name: 'sun-cloud', src: "https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339339/Project%202_API%20Calls/Sunny-01_iaqfif.png"}, 
-    {name: 'rain', src: "https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339339/Project%202_API%20Calls/Sunny-01_iaqfif.png"}, 
-    {name: 'snow', src: "https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339339/Project%202_API%20Calls/Sunny-01_iaqfif.png"}, 
-]
+// const tempIcons = [
+//     {name: 'sun', src: "https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339339/Project%202_API%20Calls/Sunny-01_iaqfif.png"}, 
+//     {name: 'cloud', src: "https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339339/Project%202_API%20Calls/Sunny-01_iaqfif.png"}, 
+//     {name: 'sun-cloud', src: "https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339339/Project%202_API%20Calls/Sunny-01_iaqfif.png"}, 
+//     {name: 'rain', src: "https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339339/Project%202_API%20Calls/Sunny-01_iaqfif.png"}, 
+//     {name: 'snow', src: "https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339339/Project%202_API%20Calls/Sunny-01_iaqfif.png"}, 
+// ]
 
 const RiverWeather = (props) => {
     const apiKey = 'aa935301c915ffe8a819f0d6177a4bf7'
