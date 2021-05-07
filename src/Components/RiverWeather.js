@@ -3,19 +3,24 @@ import {useState,useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import riversArr from '../riversArr'
 
-// setRiverInfo({ weather: data, river: riverInfo })
+const tempIcons = [
+    {name: 'sun', src: "https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339339/Project%202_API%20Calls/Sunny-01_iaqfif.png"}, 
+    {name: 'cloud', src: "https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339339/Project%202_API%20Calls/Sunny-01_iaqfif.png"}, 
+    {name: 'sun-cloud', src: "https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339339/Project%202_API%20Calls/Sunny-01_iaqfif.png"}, 
+    {name: 'rain', src: "https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339339/Project%202_API%20Calls/Sunny-01_iaqfif.png"}, 
+    {name: 'snow', src: "https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339339/Project%202_API%20Calls/Sunny-01_iaqfif.png"}, 
+]
 
 const RiverWeather = (props) => {
     const apiKey = 'aa935301c915ffe8a819f0d6177a4bf7'
     const apiLocation = props.match.params.zip
-    // console.log('test', props)
-    // const apiWeather = props.match.params.main.temp
+    
     // const url = `https://api.openweathermap.org/data/2.5/weather?q=${apiLocation},us&appid=${apiKey}`
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${apiLocation},us&units=imperial&appid=${apiKey}`
     
     const [riverInfo, setRiverInfo] = useState(null)
-    const [riverPic, setRiverPic] = useState(null)
-    
+    // I think I need to set a new state here for render
+    // const [weatherIcon, setWeatherIcon] = useState ([])
 
     const filterPic = riversArr.filter( (river) => {
         // console.log('image test')
@@ -27,25 +32,20 @@ const RiverWeather = (props) => {
         const response = await fetch(url)
         const data = await response.json()
         setRiverInfo(data)
+
+        // trying to set the img (icon) in the weather api to a var so I can call it later
+        // let image = `http://openweathermap.org/img/wn/${riverInfo.weather[0]}.icon}@2x.png`
+        // http://openweathermap.org/img/wn/01d@2x.png
+        // setWeatherIcon(image)
+
+        // console.log(riverInfo.weather[0].icon);
+        // console.log(image)
+
     }
     useEffect( () => {getData()}, [])
-
-    // const setWeatherIcon = () => {
-    //     console.log('testing')
-    // }
-
-    function setWeatherIcon() {
-        console.log()
-    }
-    setWeatherIcon()
-
-
     
     
-    const loaded = (props) => {
-        // console.log(riverInfo);
-        // (setWeatherIcon)
-        
+    const loaded = (props) => {        
         const temp = riverInfo.main.temp;
         const wind = riverInfo.wind.speed;
         
@@ -68,6 +68,7 @@ const RiverWeather = (props) => {
                
                 <div>
                 <img src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339339/Project%202_API%20Calls/Sunny-01_iaqfif.png" alt="" id='tempature-icon'></img>
+                <img src="{weatherIcon}" alt="" id='tempature-icon'></img>
                     <h3>TEMP: {temp}</h3>
                 </div>
                 <div>
