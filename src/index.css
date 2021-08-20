@@ -43,7 +43,7 @@
     left: 3vw;
 }
 
-.main-image {
+.main-image-container {
     /* border: 2px solid hotpink; */
     max-width: 100%;
     height: 550px;

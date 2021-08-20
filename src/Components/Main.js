@@ -11,7 +11,7 @@ const Main = () => {
 
             <Switch>
                 <Route exact path='/'>
-                    <div className='main-image'>
+                    <div className='main-image-container'>
                         <img src='https://res.cloudinary.com/dhad6e9gj/image/upload/v1620093668/Project%202_API%20Calls/Fishing_Image_scaled_bur7an.jpg'></img>
                     </div>
 
@@ -19,7 +19,7 @@ const Main = () => {
                     <button className='find-water-button'>Find your water weather
                             <img src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1620098166/Project%202_API%20Calls/Water_Logo-01_sbtnuj.png" id="water-logo"></img>
                     </button>
-                </Link>
+ </Link>               
                 </Route>
 
                 {/* LINK to show river buttons */}

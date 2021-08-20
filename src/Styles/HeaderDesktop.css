@@ -9,7 +9,7 @@
     .header {
         /* border: 2px solid red; */
         position: relative;
-        top: 190px;
-
+        top: 110px;
+        z-index: 1;
     }
 }
