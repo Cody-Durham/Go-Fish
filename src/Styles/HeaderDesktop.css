@@ -1,8 +1,15 @@
-@media screen and (max-width: 2560px) {
+:root {
+    --primaryColor: #2e2f31;
+    --orangeColor: #ec6e08;
+    --lightGreyColor: #bdbdbd;
+}
+
+
+@media screen and (max-width: 3000px) {
     .header {
         /* border: 2px solid red; */
         position: relative;
-        top: 90px;
+        top: 190px;
 
     }
 }

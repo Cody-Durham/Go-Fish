@@ -1,5 +1,21 @@
+:root {
+    --primaryColor: #2e2f31;
+    --orangeColor: #ec6e08;
+    --lightGreyColor: #bdbdbd;
+}
+
+
 @media screen and (min-width: 768px) {
     .main-image {
-        border: 2px solid red;
+        /* border: 2px solid red; */
+        max-width: 800px;
+        height: 1000px;
+        margin: 0 auto;
+        margin-top: 100px
+    }
+    .main-image img {
+        /* border: 2px solid red; */
+        width: 700px;
+        object-fit: cover;
     }
 }

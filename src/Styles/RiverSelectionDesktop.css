@@ -1,6 +1,20 @@
+:root {
+    --primaryColor: #2e2f31;
+    --orangeColor: #ec6e08;
+    --lightGreyColor: #bdbdbd;
+}
+
+
 @media screen and (min-width: 1024px) {
     .river-container {
-        border: 2px solid red;
+        border: 4px solid var(--lightGreyColor);
+        border-radius: 10px;
+        max-width: 800px;
+        height: 1000px;
+        margin: 0 auto;
+        margin-top: 100px;
+        overflow:auto; /* this gets rid of overflow scroll bar on side*/
+        /* background-color: green; */
     }
     /* .link {
         border: 2px solid red;
