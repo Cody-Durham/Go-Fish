@@ -1,0 +1,5 @@
+@media screen and (min-width: 768px) {
+    .main-image {
+        border: 2px solid red;
+    }
+}

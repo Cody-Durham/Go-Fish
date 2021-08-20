@@ -2,6 +2,7 @@ import React from 'react'
 import {Link, Route, Switch} from 'react-router-dom'
 import RiverSelection from './RiverSelection'
 import RiverWeather from './RiverWeather'
+import '../Styles/MainDesktop.css'
 
 const Main = () => {
     
