@@ -78,12 +78,12 @@ const RiverWeather = (props) => {
                 </div>
                 <Link to={'/riverselection'}>
                     <div id="back-to-rivers-button-container">
-                        <div id="button">Back to rivers</div>
+                        <div id="back-button">Back to rivers</div>
                     </div>
                 </Link>
                 <Link to={'/'}>
                     <div id="back-to-home-button-container">
-                        <div id="button">Back to the truck</div>
+                        <div id="back-button">Back to the truck</div>
                     </div>
                 </Link>
 

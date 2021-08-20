@@ -13,7 +13,7 @@ const RiverSelection = () => {
                 return (
                     <Link to={`/riverweather/${river.zip}`} class="link"> 
                         <div key={index}>
-                            <h2 className='button'>{name}</h2>
+                            <h2 id='river-button'>{name}</h2>
                         </div>
                     </Link>)
             })}
