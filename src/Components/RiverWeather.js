@@ -2,6 +2,7 @@ import React from 'react';
 import {useState,useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import riversArr from '../riversArr'
+import '../Styles/RiverWeatherDesktop.css'
 
 // const tempIcons = [
 //     {name: 'sun', src: "https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339339/Project%202_API%20Calls/Sunny-01_iaqfif.png"}, 
@@ -50,7 +51,7 @@ const RiverWeather = (props) => {
         const wind = riverInfo.wind.speed;
         
         return (
-             <section>
+             <section className='river-name-wrapper'>
                 <div className="river-name-container">
                     {/* <p> City Location:</p> */}
                     <h3>{riverInfo.name}</h3>
@@ -65,27 +66,24 @@ const RiverWeather = (props) => {
                     {/* <img src="{riverInfo.img}" alt=""></img> */}
                 </div>
                 <div id="weather-container">
-               
-                <div>
-                <img src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339339/Project%202_API%20Calls/Sunny-01_iaqfif.png" alt="" id='tempature-icon'></img>
-                <img src="{weatherIcon}" alt="" id='tempature-icon'></img>
-                    <h3>TEMP: {temp}</h3>
-                </div>
-                <div>
-                <img src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339683/Project%202_API%20Calls/Windy-01_zjb8jc.png" alt="" id='wind-icon'></img>
-                    <h3>WIND: 0{wind}</h3>
-                </div>
-
-             
+                    <div>
+                    <img src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339339/Project%202_API%20Calls/Sunny-01_iaqfif.png" alt="" id='tempature-icon'></img>
+                    <img src="{weatherIcon}" alt="" id='tempature-icon'></img>
+                        <h3>TEMP: {temp}</h3>
+                    </div>
+                    <div>
+                    <img src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1620339683/Project%202_API%20Calls/Windy-01_zjb8jc.png" alt="" id='wind-icon'></img>
+                        <h3>WIND: 0{wind}</h3>
+                    </div>             
                 </div>
                 <Link to={'/riverselection'}>
                     <div id="back-to-rivers-button-container">
-                        <button className="button">Back to rivers</button>
+                        <div id="button">Back to rivers</div>
                     </div>
                 </Link>
                 <Link to={'/'}>
                     <div id="back-to-home-button-container">
-                        <button className="button">Back to the truck</button>
+                        <div id="button">Back to the truck</div>
                     </div>
                 </Link>
 

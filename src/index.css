@@ -183,11 +183,11 @@ input[type='submit'] {
     /* border:2px solid red;  */
     position: relative;
     bottom: 45px;
-    margin: 0px;
+    /* margin: 0px; */
 }
 
 #river-image {
-    /* border: 2px solid red); */
+    /* border: 2px solid red; */
     width: 90vw;
     height: 500px; 
     overflow: hidden;
