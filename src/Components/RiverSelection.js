@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import riversArr from '../riversArr'
+import '../Styles/RiverSelectionDesktop.css'
 
 const RiverSelection = () => {  
     return (
@@ -12,8 +13,8 @@ const RiverSelection = () => {
                 return (
                     <Link to={`/riverweather/${river.zip}`} class="link"> 
                         <div key={index}>
+                            <h2 className='button'>{name}</h2>
                         </div>
-                        <h2 className='button'>{name}</h2>
                     </Link>)
             })}
         </div>
